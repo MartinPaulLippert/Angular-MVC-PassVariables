@@ -24,7 +24,7 @@ Code for blog post http://enlighten-media.net/blog/general/passing-variables-fro
 
 (function () {
 
-    var app = angular.module('myApp', []);
+    angular.module('myApp', []);
     
     angular.module('myApp').controller('myController', myController);
     myController.$inject = ['id', 'name', 'value'];
