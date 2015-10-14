@@ -1,4 +1,4 @@
-Passing MVC variables to AngularJS using Razor — Edit
+Passing variables from MVC Controller to AngularJS using Razor 
 
 Code for blog post http://enlighten-media.net/blog/general/passing-variables-from-mvc-to-angularjs-using-razor
 
