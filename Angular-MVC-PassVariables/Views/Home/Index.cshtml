@@ -1,0 +1,31 @@
+﻿@model Angular_MVC_PassVariables.Models.MyModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="jumbotron" ng-app="myApp" ng-controller="myController as myCtrlr">
+    <div class="row">
+        <div class="col-xs-6">Id</div>
+        <div class="col-xs-4">Name</div>
+        <div class="col-xs-2">Value</div>
+    </div>
+    <div class="row ng-cloak" >
+        <div class="col-xs-6">{{myCtrlr.id}}</div>
+        <div class="col-xs-4">{{myCtrlr.name}}</div>
+        <div class="col-xs-2">{{myCtrlr.value}}</div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/App/app.js"></script>
+    <script>
+        angular.module('myApp').value({
+            id: '@Model.Id',
+            name: '@Model.Name',
+            value: @Model.Value,
+        });
+    </script>
+}
